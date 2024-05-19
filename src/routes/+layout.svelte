@@ -16,8 +16,6 @@
 	</footer>
 </div>
 
-<slot></slot>
-
 <style>
 	.app {
 		display: flex;
