@@ -11,5 +11,3 @@
 	<Heading tag="h1" class="mb-4">Hey, I'm Joost</Heading>
 	<P size="lg">Software developer and passionate problem solver</P>
 </div>
-
-Welcome to my personal website.
