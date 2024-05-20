@@ -2,7 +2,6 @@
 	import { P } from 'flowbite-svelte';
 	import '../app.css';
 	import Header from './Header.svelte';
-	import './styles.css';
 </script>
 
 <div class="flex flex-col min-h-screen">
