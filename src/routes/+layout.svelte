@@ -1,17 +1,15 @@
 <script>
-	import { P } from 'flowbite-svelte';
 	import '../app.css';
 	import Header from './Header.svelte';
+	import Footer from './Footer.svelte';
 </script>
 
 <div class="flex flex-col min-h-screen">
-	<Header></Header>
+	<Header />
 
-	<main class="mx-auto flex-1">
+	<main class="mx-auto flex-1 px-4 w-full max-w-3xl">
 		<slot></slot>
 	</main>
 
-	<footer class="mx-auto pb-4">
-		<P>grab a coffee with Joost</P>
-	</footer>
+	<Footer />
 </div>

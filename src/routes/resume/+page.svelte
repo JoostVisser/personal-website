@@ -1,62 +1,48 @@
 <script>
 	import ResumeCard from './ResumeCard.svelte';
-	import { Heading, Li, List, P } from 'flowbite-svelte';
-	import { Tabs, TabItem, Timeline, TimelineItem, Button } from 'flowbite-svelte';
+	import { Breadcrumb, BreadcrumbItem, Heading, P } from 'flowbite-svelte';
+	import { Tabs, TabItem, Button } from 'flowbite-svelte';
 
-  import { career } from '$lib/resume_data'
+	import { achievements, career, education } from '$lib/resume_data';
+  import { AngleLeftOutline } from 'flowbite-svelte-icons';
+
+	const tabClass = 'text-lg font-bold';
 </script>
 
-<Heading tag="h1" class="my-8">Resume</Heading>
+<a href="/" class="mt-2 flex flex-row gap-x-1 items-center">
+  <AngleLeftOutline class="text-gray-500 dark:text-gray-400" />
+  <P class="text-gray-500 dark:text-gray-400">Back</P>
+</a>
 
-<Button outline class="mx-auto mb-10 mr-4">Download PDF</Button>
-<Button outline class="mx-auto mb-10">Download SVG</Button>
+<Heading tag="h1" class="mb-8 mt-2">Resume</Heading>
 
-<Tabs tabStyle="pill" contentClass="p-4">
+<a href="/Resume Joost Visser.pdf" download="Resume Joost Visser.pdf"
+	><Button outline class="mb-8">Download PDF</Button></a
+>
+
+<Tabs tabStyle="pill" contentClass="">
 	<TabItem open>
-		<div slot="title" class="text-lg">Career</div>
-    <Heading tag="h2">Career</Heading>
-    {#each career as entry}
-      <ResumeCard {...entry} />
-    {/each}
+		<div slot="title" class={tabClass}>Career</div>
+		{#each career as entry}
+			<ResumeCard {...entry} />
+		{/each}
 	</TabItem>
 	<TabItem>
-		<div slot="title" class="text-lg">Education</div>
-		<Timeline>
-			<TimelineItem
-				title="Full-stack developer at ELEO (temporary project)"
-				date="April 2023 - April 2024"
-			>
-				<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-					ELEO develops modular batteries for off-highway vehicles.
-				</p>
-
-				<ul>
-					<li>Developed and designed the Windows tooling app and API</li>
-					<li>Created our CI pipeline and infrastructure, increasing test-coverage 2% → 60%</li>
-					<li>Served as SCRUM master, increasing goal delivery rate from 20% to 90%.</li>
-				</ul>
-				<code>Dart, Flutter, Nest.js, Svelte, C++, Python, Azure, Terraform, PostgreSQL</code>
-			</TimelineItem>
-			<TimelineItem title="Application UI code in Tailwind CSS" date="March 2022">
-				<p class="text-base font-normal text-gray-500 dark:text-gray-400">
-					All of the pages and components are first designed in Figma and we keep a parity between
-					the two versions even as we update the project.
-				</p>
-			</TimelineItem>
-			<TimelineItem title="Application UI code in Tailwind CSS" date="April 2022">
-				<p class="text-base font-normal text-gray-500 dark:text-gray-400">
-					Get started with dozens of web components and interactive elements built on top of
-					Tailwind CSS.
-				</p>
-			</TimelineItem>
-		</Timeline>
+		<div slot="title" class={tabClass}>Projects</div>
+		{#each career as entry}
+			<ResumeCard {...entry} />
+		{/each}
 	</TabItem>
 	<TabItem>
-		<div slot="title" class="text-lg">Highlights</div>
-		<p class="text-sm text-gray-500 dark:text-gray-400"></p>
+		<div slot="title" class={tabClass}>Achievements</div>
+		{#each achievements as entry}
+			<ResumeCard {...entry} />
+		{/each}
 	</TabItem>
 	<TabItem>
-		<div slot="title" class="text-lg">Users</div>
-		<p class="text-sm text-gray-500 dark:text-gray-400"></p>
+		<div slot="title" class={tabClass}>Education</div>
+		{#each education as entry}
+			<ResumeCard {...entry} />
+		{/each}
 	</TabItem>
 </Tabs>

@@ -42,7 +42,10 @@
   },
   "type": "module",
   "dependencies": {
+    "@sveltejs/enhanced-img": "^0.2.0",
     "flowbite": "^2.3.0",
-    "flowbite-svelte": "^0.46.1"
+    "flowbite-svelte": "^0.46.1",
+    "flowbite-svelte-blocks": "^1.1.1",
+    "flowbite-svelte-icons": "^1.6.1"
   }
 }
