@@ -1,17 +1,19 @@
 <script>
-	import ResumeCard from './ResumeCard.svelte';
-	import { Breadcrumb, BreadcrumbItem, Heading, P } from 'flowbite-svelte';
+	import { Heading, P } from 'flowbite-svelte';
 	import { Tabs, TabItem, Button } from 'flowbite-svelte';
 
-	import { achievements, career, education } from '$lib/resume_data';
-  import { AngleLeftOutline } from 'flowbite-svelte-icons';
+	import { AngleLeftOutline } from 'flowbite-svelte-icons';
+	import AchievementCards from './AchievementCards.svelte';
+	import CareerCards from './CareerCards.svelte';
+	import ProjectCards from './ProjectCards.svelte';
+	import EducationCards from './EducationCards.svelte';
 
-	const tabClass = 'text-lg font-bold';
+	const tabClass = 'text-md sm:text-lg font-semibold';
 </script>
 
-<a href="/" class="mt-2 flex flex-row gap-x-1 items-center">
-  <AngleLeftOutline class="text-gray-500 dark:text-gray-400" />
-  <P class="text-gray-500 dark:text-gray-400">Back</P>
+<a href="/" class="mt-2 flex flex-row items-center gap-x-1">
+	<AngleLeftOutline class="text-gray-500 dark:text-gray-400" />
+	<P class="text-gray-500 dark:text-gray-400">Back</P>
 </a>
 
 <Heading tag="h1" class="mb-8 mt-2">Resume</Heading>
@@ -23,26 +25,18 @@
 <Tabs tabStyle="pill" contentClass="">
 	<TabItem open>
 		<div slot="title" class={tabClass}>Career</div>
-		{#each career as entry}
-			<ResumeCard {...entry} />
-		{/each}
-	</TabItem>
-	<TabItem>
-		<div slot="title" class={tabClass}>Projects</div>
-		{#each career as entry}
-			<ResumeCard {...entry} />
-		{/each}
+		<CareerCards />
 	</TabItem>
 	<TabItem>
 		<div slot="title" class={tabClass}>Achievements</div>
-		{#each achievements as entry}
-			<ResumeCard {...entry} />
-		{/each}
+		<AchievementCards />
+	</TabItem>
+	<TabItem>
+		<div slot="title" class={tabClass}>Projects</div>
+		<ProjectCards />
 	</TabItem>
 	<TabItem>
 		<div slot="title" class={tabClass}>Education</div>
-		{#each education as entry}
-			<ResumeCard {...entry} />
-		{/each}
+		<EducationCards />
 	</TabItem>
 </Tabs>
