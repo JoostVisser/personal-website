@@ -19,7 +19,6 @@ COPY . .
 
 # Tests & build
 ENV NODE_ENV=production
-# RUN bun test
 RUN pnpm run build
 
 # Copy production dependencies and source code into final image

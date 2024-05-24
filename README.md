@@ -28,7 +28,7 @@ pnpm exec playwright install
 
 ## Developing
 
-Once you've created a project and installed dependencies with `bun install`, start a development server:
+Once you've created a project and installed dependencies with `pnpm install`, start a development server:
 
 ```bash
 pnpm run dev
