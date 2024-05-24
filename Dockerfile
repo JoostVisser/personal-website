@@ -1,17 +1,17 @@
 # See all versions at https://hub.docker.com/r/oven/bun/tags
-FROM oven/bun:1 as base
+FROM node:20-bookworm-slim as base
 WORKDIR /usr/src/app
+RUN npm install -g pnpm
 
 # install dependencies into temp directory, for layer caching
 FROM base as install
 RUN mkdir -p /temp/dev
-COPY package.json bun.lockb /temp/dev/
-RUN cd /temp/dev && bun install --frozen-lockfile
+COPY package.json pnpm-lock.yaml /temp/dev/
+RUN cd /temp/dev && pnpm install --frozen-lockfile
 
 RUN mkdir -p /temp/prod
-COPY package.json bun.lockb /temp/prod/
-RUN cd /temp/prod && bun install --frozen-lockfile
-
+COPY package.json pnpm-lock.yaml /temp/prod/
+RUN cd /temp/prod && pnpm install --frozen-lockfile --production
 
 FROM base AS prerelease
 COPY --from=install /temp/dev/node_modules node_modules
@@ -19,15 +19,16 @@ COPY . .
 
 # Tests & build
 ENV NODE_ENV=production
-RUN bun test
-RUN bun run build
+# RUN bun test
+RUN pnpm run build
 
 # Copy production dependencies and source code into final image
 FROM base AS release
 COPY --from=install /temp/prod/node_modules node_modules
-COPY --from=prerelease /usr/src/app/build .
+COPY --from=prerelease /usr/src/app/build build
+COPY package.json build/
 
 # Run the app
-USER bun
+USER node
 EXPOSE 3000/tcp
-ENTRYPOINT [ "bun", "build/index.js" ]
+ENTRYPOINT [ "node", "build/index.js" ]

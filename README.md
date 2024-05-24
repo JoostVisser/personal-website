@@ -2,21 +2,27 @@
 
 My main goals are to have a place to showcase my work, and to have a place to experiment
 with new technologies and ideas.
-- Website is hosted on a cluster using K8s
-- Uses a headless CMS to blog
+- [ ] Website is hosted on a cluster using K8s
+- [ ] Uses a headless CMS to blog
 
 ## Getting started
 
-Install bun
+Install pnpm
 
 ```bash
-curl -fsSL https://bun.sh/install | bash # for macOS, Linux, and WSL
+npm install -g pnpm
 ```
 
 Install dependencies
 
 ```bash
-bun install
+pnpm install
+```
+
+Install playwright if you want to run integration tests (Fedora not supported):
+
+```bash
+pnpm exec playwright install
 ```
 
 
@@ -25,20 +31,18 @@ bun install
 Once you've created a project and installed dependencies with `bun install`, start a development server:
 
 ```bash
-bun run dev
+pnpm run dev
 
 # or start the server and open the app in a new browser tab
-bun run dev -- --open
+pnpm run dev -- --open
 ```
 
 ## Building
 
-To create a production version of your app:
+To create a production version of the app:
 
 ```bash
-bun run build
+pnpm run build
 ```
 
-You can preview the production build with `bun run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+You can preview the production build with `pnpm run preview`.
