@@ -40,6 +40,7 @@ jobs:
           retention-days: 30
 
   build-and-upload-docker:
+    environment: Main
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: [build-and-test, integration-tests]
     runs-on: ubuntu-24.04
