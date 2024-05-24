@@ -15,6 +15,7 @@ jobs:
       - run: pnpm test
 
   playwright-integration-tests:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     name: 'Playwright Tests'
     runs-on: ubuntu-22.04
     container:

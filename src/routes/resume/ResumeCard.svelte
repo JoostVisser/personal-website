@@ -40,7 +40,7 @@
 	</List>
 
 	{#if languageList !== undefined}
-		<div class="flex flex-row flex-wrap gap-2 pb-3">
+		<div class="flex flex-row flex-wrap gap-2 pb-3" data-testid="language-list">
 			{#each languageList as language}
 				<Badge large={isMd} color="dark">{language}</Badge>
 			{/each}
