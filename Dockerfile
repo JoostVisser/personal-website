@@ -1,7 +1,7 @@
 # See all versions at https://hub.docker.com/r/oven/bun/tags
 FROM node:20-bookworm-slim as base
 WORKDIR /usr/src/app
-RUN npm install -g pnpm
+RUN npm install -g pnpm@9.1.3
 
 # install dependencies into temp directory, for layer caching
 FROM base as install
@@ -23,11 +23,12 @@ RUN pnpm run build
 
 # Copy production dependencies and source code into final image
 FROM base AS release
+ENV PORT=3000
 COPY --from=install /temp/prod/node_modules node_modules
 COPY --from=prerelease /usr/src/app/build build
 COPY package.json build/
 
 # Run the app
 USER node
-EXPOSE 3000/tcp
+EXPOSE $PORT/tcp
 ENTRYPOINT [ "node", "build/index.js" ]
