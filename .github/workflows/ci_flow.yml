@@ -46,7 +46,7 @@ jobs:
 
   build-and-upload-docker:
     environment: Main
-    if: github.ref == 'refs/heads/main' || github.ref == 'refs/tags/*'
+    if: github.ref == 'refs/heads/main' || contains(github.ref, 'refs/tags/')
     needs: [build-and-test, integration-tests]
     runs-on: ubuntu-24.04
     steps:
@@ -87,7 +87,7 @@ jobs:
 
   deploy-to-server:
     environment: Main
-    if: github.ref == 'refs/tags/*'
+    if: contains(github.ref, 'refs/tags/')
     needs: [build-and-upload-docker]
     runs-on: ubuntu-24.04
     steps:
