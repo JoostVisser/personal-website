@@ -1,7 +1,9 @@
 name: Website CI
 run-name: 🚀 Main CI/CD Flow 🚀
 on: [push]
-env: SERVER_HOST=joostvisser.dev
+env:
+  SERVER_HOST: joostvisser.dev
+  DOCKER_IMAGE: joostvisser/personal-website
 jobs:
   build-and-test:
     runs-on: ubuntu-22.04
@@ -98,13 +100,13 @@ jobs:
           ssh-keyscan -H $SERVER_HOST > ~/.ssh/known_hosts
        -
          name: Copy deployment files
-         run: rsync -azv --delete deployment/ joost@joostvisser.dev:~/portfolio-deployment
+         run: rsync -azv --delete deployment/ joost@$SERVER_HOST:~/portfolio-deployment
        -
          name: Execute deploy script
          run: |
           ssh joost@joostvisser.dev '
             cd portfolio-deployment &&
-            microk8s kubectl kustomize edit set image busybox=joostvisser/personal-website:${{ github.ref_name }} &&
+            microk8s kubectl kustomize edit set image busybox=$DOCKER_IMAGE:${{ github.ref_name }} &&
             cd .. &&
             microk8s kubectl -k portfolio-deployment
           '
