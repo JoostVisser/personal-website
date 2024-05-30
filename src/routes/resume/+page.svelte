@@ -12,7 +12,7 @@
 </script>
 
 <svelte:head>
-	<title>Resume</title>
+	<title>Resume - Joost Visser</title>
 	<meta name="description" content="Resume of Joost Visser" />
 </svelte:head>
 

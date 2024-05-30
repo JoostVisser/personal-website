@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Home - Joost Visser</title>
 	<meta name="description" content="Portfolio of Joost Visser" />
 </svelte:head>
 
