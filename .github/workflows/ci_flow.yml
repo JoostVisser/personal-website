@@ -104,9 +104,9 @@ jobs:
        -
          name: Execute deploy script
          run: |
-          ssh joost@joostvisser.dev '
+          ssh joost@$SERVER_HOST '
             cd portfolio-deployment &&
-            kustomize edit set image busybox=$DOCKER_IMAGE:${{ github.ref_name }} &&
+            kustomize edit set image busybox=${{ env.DOCKER_IMAGE }}:${{ github.ref_name }} &&
             cd .. &&
-            microk8s kubectl -k portfolio-deployment
+            microk8s kubectl apply -k portfolio-deployment
           '
