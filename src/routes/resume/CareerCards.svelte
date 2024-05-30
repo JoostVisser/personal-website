@@ -25,9 +25,9 @@
 		Lightyear was a scale-up company developing the world's first solar.
 	</div>
 	<div slot="bullets">
-		<li>Setup our Python infrastructure, including test-framework and CI-tooling.'</li>
-		<li>Introduced versioning, changelogs, and trunk-based git.'</li>
-		<li>Integration and software testing.'</li>
+		<li>Setup our Python infrastructure, including test-framework and CI-tooling.</li>
+		<li>Introduced versioning, changelogs, and trunk-based git.</li>
+		<li>Integration and software testing.</li>
 		<li>Organised quarterly alignment events and gave several workshops.</li>
 	</div>
 </ResumeCard>
@@ -40,7 +40,7 @@
 	</div>
 	<div slot="bullets">
 		<li>Developed a reliable fall-detection algorithm.</li>
-		<li>Managed a literature study with external parties.'</li>
+		<li>Managed a literature study with external parties.</li>
 		<li>Provided support for the QMS in Confluence.</li>
 	</div>
 </ResumeCard>
@@ -52,8 +52,8 @@
 		Guest lecturer for the third-year course 'Algorithms and Data Structures'.
 	</div>
 	<div slot="bullets">
-		<li>Created and gave lectures.',</li>
-		<li>Developed and graded assignments.',</li>
-		<li>Developed and graded exams.'</li>
+		<li>Created and gave lectures.</li>
+		<li>Developed and graded assignments.</li>
+		<li>Developed and graded exams.</li>
 	</div>
 </ResumeCard>
