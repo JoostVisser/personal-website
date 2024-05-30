@@ -1,11 +1,11 @@
 <script>
-	import { Button, Heading, P } from 'flowbite-svelte';
-	import { ArrowRightOutline, AngleRightOutline } from 'flowbite-svelte-icons';
+	import { Heading, P } from 'flowbite-svelte';
+	import { AngleRightOutline } from 'flowbite-svelte-icons';
 </script>
 
 <svelte:head>
 	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content="Portfolio of Joost Visser" />
 </svelte:head>
 
 <div class="mb-30 my-20 flex flex-row items-center justify-center sm:mt-40">

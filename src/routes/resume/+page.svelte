@@ -11,6 +11,11 @@
 	const tabClass = 'text-md sm:text-lg font-semibold';
 </script>
 
+<svelte:head>
+	<title>Resume</title>
+	<meta name="description" content="Resume of Joost Visser" />
+</svelte:head>
+
 <a href="/" class="mt-2 flex flex-row items-center gap-x-1">
 	<AngleLeftOutline class="text-gray-500 dark:text-gray-400" />
 	<P class="text-gray-500 dark:text-gray-400">Back</P>
