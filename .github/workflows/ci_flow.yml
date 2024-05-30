@@ -106,7 +106,7 @@ jobs:
          run: |
           ssh joost@joostvisser.dev '
             cd portfolio-deployment &&
-            microk8s kubectl kustomize edit set image busybox=$DOCKER_IMAGE:${{ github.ref_name }} &&
+            kustomize edit set image busybox=$DOCKER_IMAGE:${{ github.ref_name }} &&
             cd .. &&
             microk8s kubectl -k portfolio-deployment
           '
