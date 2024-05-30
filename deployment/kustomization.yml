@@ -1,0 +1,9 @@
+resources:
+- portfolio-ns.yml
+- portfolio-ingress.yml
+- portfolio-deployment.yml
+
+images:
+- name: busybox
+  newName: joostvisser/personal-website
+  newTag: latest

@@ -1,6 +1,7 @@
 name: Website CI
 run-name: 🚀 Main CI/CD Flow 🚀
 on: [push]
+env: SERVER_HOST=joostvisser.dev
 jobs:
   build-and-test:
     runs-on: ubuntu-22.04
@@ -27,11 +28,13 @@ jobs:
           node-version: "20"
           cache: "pnpm"
       - run: pnpm install --frozen-lockfile
-      - name: Run your tests
+      -
+        name: Run your tests
         run: pnpm run test:integration
         env:
           HOME: /root
-      - name: Upload test results
+      -
+        name: Upload test results
         uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
@@ -41,7 +44,7 @@ jobs:
 
   build-and-upload-docker:
     environment: Main
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/tags/*'
     needs: [build-and-test, integration-tests]
     runs-on: ubuntu-24.04
     steps:
@@ -52,6 +55,18 @@ jobs:
       -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
+      -
+        name: Github metadata for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: |
+            joostvisser/personal-website
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
       -
         name: Login to Docker Hub
         uses: docker/login-action@v3
@@ -64,6 +79,32 @@ jobs:
         with:
           context: .
           platforms: linux/amd64,linux/arm64
-          push: true
-          tags: joostvisser/personal-website:latest
-          target: release
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+  deploy-to-server:
+    environment: Main
+    if: github.ref == 'refs/tags/*'
+    needs: [build-and-upload-docker]
+    runs-on: ubuntu-24.04
+    steps:
+       - uses: actions/checkout@v4
+       -
+         name: Populate SSH keys
+         run: |
+          install -m 600 -D /dev/null ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          ssh-keyscan -H $SERVER_HOST > ~/.ssh/known_hosts
+       -
+         name: Copy deployment files
+         run: rsync -azv --delete deployment/ joost@joostvisser.dev:~/portfolio-deployment
+       -
+         name: Execute deploy script
+         run: |
+          ssh joost@joostvisser.dev '
+            cd portfolio-deployment &&
+            microk8s kubectl kustomize edit set image busybox=joostvisser/personal-website:${{ github.ref_name }} &&
+            cd .. &&
+            microk8s kubectl -k portfolio-deployment
+          '

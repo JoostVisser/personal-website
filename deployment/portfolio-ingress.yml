@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: portfolio-ingress
+  namespace: portfolio-ns
+  annotations:
+    cert-manager.io/cluster-issuer: lets-encrypt-production
+    nginx.ingress.kubernetes.io/from-to-www-redirect: "true"
+spec:
+  tls:
+    - hosts:
+        - joostvisser.dev
+        - www.joostvisser.dev
+      secretName: joostvisser-ingress-tls
+  rules:
+    - host: joostvisser.dev
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: portfolio-service
+                port:
+                  number: 8080

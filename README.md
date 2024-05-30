@@ -46,3 +46,11 @@ pnpm run build
 ```
 
 You can preview the production build with `pnpm run preview`.
+
+## Deployment
+
+Deployment happens automatically when tagging the branch with a version number. In a nutshell, what will happen:
+- An AMD64 and an ARM64 docker will be built and pushed to the registry
+- The k8s cluster will be updated with the new image according to `deployment/deploy.sh`.
+
+Check out the `.github/workflows/ci_flow.yml` file for more details.
