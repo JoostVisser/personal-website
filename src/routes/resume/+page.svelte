@@ -8,8 +8,8 @@
 	import ProjectCards from './ProjectCards.svelte';
 	import EducationCards from './EducationCards.svelte';
 
-	const tabClassActive = 'inline-block text-sm sm:text-lg font-medium text-center disabled:cursor-not-allowed font-semibold py-3 px-2 sm:px-4 text-white bg-primary-600 rounded-lg active'
-	const tabClassInactive = 'inline-block text-sm sm:text-lg font-medium text-center disabled:cursor-not-allowed font-semibold py-3 px-2 sm:px-4 text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white'
+	const tabClassActive = 'inline-block text-sm sm:text-lg font-medium text-center disabled:cursor-not-allowed font-semibold py-3 px-2.5 sm:px-4 text-white bg-primary-600 rounded-lg active'
+	const tabClassInactive = 'inline-block text-sm sm:text-lg font-medium text-center disabled:cursor-not-allowed font-semibold py-3 px-2.5 sm:px-4 text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white'
 </script>
 
 <a href="/" class="mt-2 flex flex-row items-center gap-x-1">
@@ -25,7 +25,7 @@
 
 <Tabs tabStyle="pill"
       contentClass=""
-	  defaultClass="flex mb-4 sm:mb-6 justify-around sm:justify-start flex-wrap space-x-1 sm:space-x-2 rtl:space-x-reverse">
+	  defaultClass="flex mb-4 sm:mb-6 justify-around sm:justify-start flex-wrap space-x-0.5 sm:space-x-2 rtl:space-x-reverse">
 	<TabItem open
 			 activeClasses={tabClassActive}
 			 inactiveClasses={tabClassInactive}
