@@ -25,7 +25,7 @@
 
 <Tabs tabStyle="pill"
       contentClass=""
-	  defaultClass="flex mb-4 sm:mb-6 justify-between sm:justify-start flex-wrap space-x-1 sm:space-x-2 rtl:space-x-reverse">
+	  defaultClass="flex mb-4 sm:mb-6 justify-around sm:justify-start flex-wrap space-x-1 sm:space-x-2 rtl:space-x-reverse">
 	<TabItem open
 			 activeClasses={tabClassActive}
 			 inactiveClasses={tabClassInactive}

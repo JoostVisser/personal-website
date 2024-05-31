@@ -79,8 +79,9 @@
 <ResumeCard>
 	<div slot="title">National Training in Mathematics</div>
 	<div slot="date">September 2010 - June 2011</div>
-	<div slot="summary">I placed top-10 in the Dutch Mathematical of my year.</div>
+	<div slot="summary">I placed top-10 in the Dutch Mathematical Olympiad of my year.</div>
 	<div slot="bullets">
 		<li>Received a year of paid national training in a variety of math topics.</li>
 	</div>
 </ResumeCard>
+around
