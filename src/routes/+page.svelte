@@ -3,11 +3,6 @@
 	import { AngleRightOutline } from 'flowbite-svelte-icons';
 </script>
 
-<svelte:head>
-	<title>Home - Joost Visser</title>
-	<meta name="description" content="Portfolio of Joost Visser" />
-</svelte:head>
-
 <div class="mb-30 my-20 flex flex-row items-center justify-center sm:mt-40">
 	<div class="flex flex-col items-end pr-8">
 		<Heading tag="h1" class="mb-1 sm:mb-4 text-2xl sm:text-5xl">Hey, I'm Joost</Heading>

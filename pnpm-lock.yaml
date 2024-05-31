@@ -74,6 +74,9 @@ importers:
       jsdom:
         specifier: ^24.0.0
         version: 24.0.0
+      just-extend:
+        specifier: ^6.2.0
+        version: 6.2.0
       postcss:
         specifier: ^8.4.33
         version: 8.4.38
@@ -92,6 +95,9 @@ importers:
       svelte-check:
         specifier: ^3.6.0
         version: 3.7.1(postcss-load-config@4.0.2(postcss@8.4.38))(postcss@8.4.38)(pug@3.0.2)(svelte@4.2.17)
+      svelte-meta-tags:
+        specifier: ^3.1.2
+        version: 3.1.2(svelte@4.2.17)(typescript@5.4.5)
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.3
@@ -1719,6 +1725,9 @@ packages:
   jstransformer@1.0.0:
     resolution: {integrity: sha512-C9YK3Rf8q6VAPDCCU9fnqo3mAfOH6vUGnMcP4AQAYIEpWtfGLpwOTmZ+igtdK5y+VvI2n3CyYSzy4Qh34eq24A==}
 
+  just-extend@6.2.0:
+    resolution: {integrity: sha512-cYofQu2Xpom82S6qD778jBDpwvvy39s1l/hrYij2u9AMdQcGRpaBu6kY4mVhuno5kJVi1DAz4aiphA2WI1/OAw==}
+
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
@@ -2294,6 +2303,11 @@ packages:
     resolution: {integrity: sha512-xAg7SOnEhrm5zI3puOOKyy1OMcMlIJZYNJY7xLBwSze0UjhPLnWfj2GF2EpT0jmzaJKIWKHLsaSSajf35bcYnA==}
     engines: {node: '>=v12.22.7'}
 
+  schema-dts@1.1.2:
+    resolution: {integrity: sha512-MpNwH0dZJHinVxk9bT8XUdjKTxMYrA5bLtrrGmFA6PTLwlOKnhi67XoRd6/ty+Djt6ZC0slR57qFhZDNMI6DhQ==}
+    peerDependencies:
+      typescript: '>=4.1.0'
+
   semver@7.6.2:
     resolution: {integrity: sha512-FNAIBWCx9qcRhoHcgcJ0gvU7SN1lYU2ZXuSfl04bSC5OpvDHFyJCjdNHomPXxjQlCBU67YW64PzY7/VIEH7F2w==}
     engines: {node: '>=10'}
@@ -2440,6 +2454,11 @@ packages:
     engines: {node: ^12.20 || ^14.13.1 || >= 16}
     peerDependencies:
       svelte: ^3.19.0 || ^4.0.0
+
+  svelte-meta-tags@3.1.2:
+    resolution: {integrity: sha512-zw8xSA10ce7atFO1o0N1x41+qU+HBnpGx8KcVRAWPy5iiRdO6fvUFMg6VwJVgMhLSBEUTZXKAvMALLUssbCoCw==}
+    peerDependencies:
+      svelte: ^3.55.0 || ^4.0.0
 
   svelte-parse-markup@0.1.4:
     resolution: {integrity: sha512-cU6yFDQVn1m4gqhTwgfzQP9//MgEG9nYqiGtLRjjhYtV8XEtNA/1FK+gPF4lEkfQzYjsEUPqYT0IuTFaeScGHQ==}
@@ -4452,6 +4471,8 @@ snapshots:
       is-promise: 2.2.2
       promise: 7.3.1
 
+  just-extend@6.2.0: {}
+
   keyv@4.5.4:
     dependencies:
       json-buffer: 3.0.1
@@ -4965,6 +4986,10 @@ snapshots:
     dependencies:
       xmlchars: 2.2.0
 
+  schema-dts@1.1.2(typescript@5.4.5):
+    dependencies:
+      typescript: 5.4.5
+
   semver@7.6.2: {}
 
   set-cookie-parser@2.6.0: {}
@@ -5150,6 +5175,13 @@ snapshots:
   svelte-hmr@0.16.0(svelte@4.2.17):
     dependencies:
       svelte: 4.2.17
+
+  svelte-meta-tags@3.1.2(svelte@4.2.17)(typescript@5.4.5):
+    dependencies:
+      schema-dts: 1.1.2(typescript@5.4.5)
+      svelte: 4.2.17
+    transitivePeerDependencies:
+      - typescript
 
   svelte-parse-markup@0.1.4(svelte@4.2.17):
     dependencies:

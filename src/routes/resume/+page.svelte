@@ -12,11 +12,6 @@
 	const tabClassInactive = 'inline-block text-sm sm:text-lg font-medium text-center disabled:cursor-not-allowed font-semibold py-3 px-2 sm:px-4 text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white'
 </script>
 
-<svelte:head>
-	<title>Resume - Joost Visser</title>
-	<meta name="description" content="Resume of Joost Visser" />
-</svelte:head>
-
 <a href="/" class="mt-2 flex flex-row items-center gap-x-1">
 	<AngleLeftOutline class="text-gray-500 dark:text-gray-400" />
 	<P class="text-gray-500 dark:text-gray-400">Back</P>
