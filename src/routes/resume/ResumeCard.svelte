@@ -12,7 +12,7 @@
 <svelte:window bind:outerWidth />
 
 <div
-	class="my-6 flex
+	class="mb-6 flex
 		   w-full
 		   max-w-3xl flex-col
 		   divide-gray-200
@@ -35,7 +35,7 @@
 	<P class="pb-2 text-sm md:text-base">
 		<slot name="summary" />
 	</P>
-	<List class="pb-4 text-sm text-gray-800 md:text-base dark:text-gray-300">
+	<List class="pb-4 pl-4 text-sm text-gray-800 md:text-base dark:text-gray-300 list-outside">
 		<slot name="bullets" />
 	</List>
 

@@ -7,7 +7,7 @@
 	<div slot="title">Full-stack developer at ELEO</div>
 	<div slot="date">April 2023 - April 2024</div>
 	<div slot="summary">
-		<P italic class="pb-1">Temporary project</P>
+		<p class="pb-1 italic">Temporary project</p>
 		ELEO develops modular batteries for off-highway vehicles.
 	</div>
 	<div slot="bullets">
@@ -21,7 +21,7 @@
 	<div slot="title">Embedded Systems engineer at Lightyear</div>
 	<div slot="date">May 2021 - March 2023</div>
 	<div slot="summary">
-		<P italic class="pb-1">Vacated due to bankruptcy</P>
+		<p class="pb-1 italic">Vacated due to bankruptcy</p>
 		Lightyear was a scale-up company developing the world's first solar.
 	</div>
 	<div slot="bullets">
