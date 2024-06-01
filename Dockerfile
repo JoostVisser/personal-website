@@ -30,5 +30,4 @@ COPY package.json build/
 
 # Run the app
 USER node
-EXPOSE $PORT/tcp
 ENTRYPOINT [ "node", "build/index.js" ]
