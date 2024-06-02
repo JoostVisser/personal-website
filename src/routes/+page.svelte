@@ -29,7 +29,7 @@
 		<QuoteSolid class="-mx-2 mb-3 h-12 w-12 text-gray-400 dark:text-gray-600" />
 		<Blockquote class="text-md mb-4 font-normal sm:mb-6 sm:text-lg">
 			"I really value Joost's ability to spar on any topic. Whether it is technical or process
-			related Joost generally seems to have some sort of opinion or can quickly reason about it." -
+			related, Joost generally seems to have some sort of opinion or can quickly reason about it." -
 			Software Team Lead
 		</Blockquote>
 
