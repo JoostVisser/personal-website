@@ -12,7 +12,7 @@
 <svelte:window bind:outerWidth />
 
 <div
-	class="mb-6 flex
+	class="mb-4 sm:mb-6 flex
 		   w-full
 		   max-w-3xl flex-col
 		   divide-gray-200

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { A } from 'flowbite-svelte';
 	import { GithubSolid, LinkedinSolid, EnvelopeOutline} from 'flowbite-svelte-icons';
 
 	const iconClass = 'dark:text-white h-8 w-8';

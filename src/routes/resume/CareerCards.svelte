@@ -1,5 +1,4 @@
 <script>
-	import { P } from 'flowbite-svelte';
 	import ResumeCard from './ResumeCard.svelte';
 </script>
 

@@ -13,7 +13,7 @@
 
 <MetaTags {...metaTags} />
 
-<div class="flex flex-col min-h-screen">
+<div class="flex flex-col min-h-screen min-h-dvh">
 	<Header />
 
 	<main class="mx-auto flex-1 px-3 w-full max-w-3xl">

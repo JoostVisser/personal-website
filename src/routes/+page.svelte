@@ -1,5 +1,5 @@
 <script>
-	import { A, Blockquote, Card, Heading, P } from 'flowbite-svelte';
+	import { A, Blockquote, Heading, P } from 'flowbite-svelte';
 	import { AngleRightOutline, QuoteSolid } from 'flowbite-svelte-icons';
 </script>
 
@@ -27,22 +27,25 @@
 <div class="flex justify-center">
 	<div class="mx-2 max-w-md sm:max-w-2xl">
 		<QuoteSolid class="-mx-2 mb-3 h-12 w-12 text-gray-400 dark:text-gray-600" />
-		<Blockquote class="text-md mb-4 font-medium sm:mb-6 sm:text-lg">
+		<Blockquote class="text-md mb-4 font-normal sm:mb-6 sm:text-lg">
 			"I really value Joost's ability to spar on any topic. Whether it is technical or process
-			related Joost generally seems to have some sort of opinion or can quickly reason about it."
+			related Joost generally seems to have some sort of opinion or can quickly reason about it." -
+			Software Team Lead
 		</Blockquote>
 
-		<Blockquote class="text-md mb-4 font-medium sm:mb-6 sm:text-lg">
-			"I don't think Joost will ever let himself get beaten by a challenge."
+		<Blockquote class="text-md mb-4 font-normal sm:mb-6 sm:text-lg">
+			"I don't think Joost will ever let himself get beaten by a challenge." - Software teammate
 		</Blockquote>
 
-		<Blockquote class="text-md mb-4 font-medium sm:mb-6 sm:text-lg">
-			"Joost's almost stubborn view on how we should treat the product we're making has drastically
-			improved our ways of working, not only as a software organization but also for me personally."
+		<Blockquote class="text-md mb-4 font-normal sm:mb-6 sm:text-lg">
+			"Joost's view on how we should treat the product we're making has drastically improved our
+			ways of working, not only as a software organization but also for me personally." - Product
+			owner
 		</Blockquote>
 
-		<Blockquote class="text-md mb-10 font-medium sm:text-lg">
+		<Blockquote class="text-md mb-8 font-normal sm:text-lg">
 			"Joost, you have an inspiring personality, you make everything you do almost extra ordinary."
+			- SCRUM master
 		</Blockquote>
 	</div>
 </div>

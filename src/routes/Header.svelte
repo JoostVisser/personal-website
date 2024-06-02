@@ -1,7 +1,5 @@
 <script>
-	import { page } from '$app/stores';
 	import { Navbar, NavBrand, DarkMode } from 'flowbite-svelte';
-	$: activeUrl = $page.url.pathname;
 </script>
 
 <div class="mt-2" />
