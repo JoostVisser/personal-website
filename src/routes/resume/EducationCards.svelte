@@ -1,5 +1,5 @@
 <script>
-	import ResumeCard from './ResumeCard.svelte';
+	import ResumeCard from '$lib/components/ResumeCard.svelte';
 </script>
 
 <ResumeCard>

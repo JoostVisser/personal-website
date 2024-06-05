@@ -1,15 +1,15 @@
 <script>
 	import { A } from 'flowbite-svelte';
-	import ResumeCard from './ResumeCard.svelte';
+	import ResumeCard from '$lib/components/ResumeCard.svelte';
 </script>
 
-<ResumeCard languages="Svelte, Tailwind, Node.js">
+<ResumeCard languages="Svelte, Kubernetes, Docker, Github Actions, Tailwind, Node.js">
 	<div slot="title">Portfolio website</div>
 	<div slot="date">May 2024</div>
 	<div slot="summary">My personal portfolio website which you're currently viewing. :)</div>
 	<div slot="bullets">
 		<li>Developed using Flowbite and Svelte.</li>
-		<li>Hosted on a K8s cluster</li>
+		<li>Hosted on a K8s cluster.</li>
 		<li>
 			Code available on
 			<A href="https://github.com/JoostVisser/personal-website">Github</A>.

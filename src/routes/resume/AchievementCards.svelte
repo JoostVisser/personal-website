@@ -1,6 +1,6 @@
 <script>
 	import { A } from 'flowbite-svelte';
-	import ResumeCard from '../../routes/resume/ResumeCard.svelte';
+	import ResumeCard from '$lib/components/ResumeCard.svelte';
 </script>
 
 <ResumeCard>

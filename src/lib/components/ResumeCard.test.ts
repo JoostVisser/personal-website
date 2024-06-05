@@ -2,7 +2,7 @@ import '@testing-library/jest-dom/vitest'
 import { render, screen } from '@testing-library/svelte'
 import { expect, test } from 'vitest'
 
-import ResumeCard from './ResumeCard.svelte'
+import ResumeCard from '$lib/components/ResumeCard.svelte'
 
 
 test("languages show as code block", () => {
