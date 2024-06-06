@@ -1,9 +1,6 @@
 # Personal website of Joost Visser
 
-My main goals are to have a place to showcase my work, and to have a place to experiment
-with new technologies and ideas.
-- [ ] Website is hosted on a cluster using K8s
-- [ ] Uses a headless CMS to blog
+My main goals are to have a place to showcase my work, and to have a place to experiment with new technologies and ideas.
 
 ## Getting started
 
