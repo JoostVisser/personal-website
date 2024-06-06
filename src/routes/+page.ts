@@ -5,7 +5,8 @@ export const prerender = true;
 
 export const load = () => {
     const pageMetaTags = Object.freeze({
-      title: 'Home',
+      title: 'Joost Visser',
+      titleTemplate: '%s',
       description: 'Home page of Joost Visser',
       openGraph: {
         title: 'Joost Visser',
