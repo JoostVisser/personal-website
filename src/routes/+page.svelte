@@ -30,7 +30,7 @@
 		<Blockquote class="text-md mb-4 font-normal sm:mb-6 sm:text-lg">
 			"I really value Joost's ability to spar on any topic. Whether it is technical or process
 			related, Joost generally seems to have some sort of opinion or can quickly reason about it." -
-			Software Team Lead
+			Head of Software
 		</Blockquote>
 
 		<Blockquote class="text-md mb-4 font-normal sm:mb-6 sm:text-lg">
