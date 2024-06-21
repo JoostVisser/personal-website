@@ -84,4 +84,3 @@
 		<li>Received a year of paid national training in a variety of math topics.</li>
 	</div>
 </ResumeCard>
-around

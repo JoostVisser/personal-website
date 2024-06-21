@@ -17,7 +17,7 @@
 </ResumeCard>
 
 <ResumeCard languages="Python, C, Rust, CircleCI, Docker, Git, CAN, CCP, SonarQube">
-	<div slot="title">Embedded Systems engineer at Lightyear</div>
+	<div slot="title">Software engineer at Lightyear</div>
 	<div slot="date">May 2021 - March 2023</div>
 	<div slot="summary">
 		<p class="pb-1 italic">Vacated due to bankruptcy</p>
