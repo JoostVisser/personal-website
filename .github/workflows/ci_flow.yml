@@ -15,6 +15,7 @@ jobs:
           node-version: '20'
           cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
+      - run: pnpm run build
       - run: pnpm test
 
   integration-tests:
@@ -30,6 +31,7 @@ jobs:
           node-version: '20'
           cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
+      - run: pnpm run build
       - name: Run your tests
         run: pnpm run test:integration
         env:
