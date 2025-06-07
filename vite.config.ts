@@ -1,12 +1,13 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { enhancedImages } from '@sveltejs/enhanced-img';
-import { defineConfig } from 'vitest/config';
-import { svelteTesting } from '@testing-library/svelte/vite'
+import { UserConfig } from 'vite';
+import { svelteTesting } from '@testing-library/svelte/vite';
+import tailwindcss from '@tailwindcss/vite';
 
-export default defineConfig({
-	plugins: [enhancedImages(), sveltekit(), svelteTesting()],
-	test: {
+export default {
+	plugins: [enhancedImages(), tailwindcss(), sveltekit(), svelteTesting()],
+	environment: {
 		include: ['src/**/*.{test,spec}.{js,ts}'],
-		environment: 'jsdom',
+		environment: 'jsdom'
 	}
-});
+} satisfies UserConfig;

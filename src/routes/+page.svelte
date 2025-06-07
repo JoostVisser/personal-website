@@ -3,15 +3,15 @@
 	import { AngleRightOutline, QuoteSolid } from 'flowbite-svelte-icons';
 </script>
 
-<div class="mb-8 mt-10 flex flex-row items-center justify-center sm:mb-16 sm:mt-40">
+<div class="mt-10 mb-8 flex flex-row items-center justify-center sm:mt-40 sm:mb-16">
 	<div class="flex flex-col items-end pr-8">
 		<Heading tag="h1" class="mb-1 text-2xl sm:mb-4 sm:text-5xl">Hey, I'm Joost</Heading>
 		<P class="text-md mb-1 sm:mb-3 sm:text-2xl">Software Developer</P>
 		<a
 			href="/resume"
-			class="inline-flex items-center
-			text-sm text-primary-800
-			hover:underline sm:text-lg dark:text-primary-500"
+			class="text-primary-800 dark:text-primary-500
+			inline-flex items-center
+			text-sm hover:underline sm:text-lg"
 		>
 			Check my resume
 			<AngleRightOutline class="ms-2 h-4 w-4" />

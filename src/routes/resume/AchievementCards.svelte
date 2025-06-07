@@ -22,7 +22,7 @@
 	<div slot="title">Chairman Kinjin</div>
 	<div slot="date">September 2017 - September 2018</div>
 	<div slot="summary">
-		Kinjin is a Japanese student culture association, providing daily activites for her members,
+		Kinjin is a Japanese student culture association, providing daily activities for her members,
 		like calligraphy or karaoke.
 	</div>
 	<div slot="bullets">
@@ -61,7 +61,7 @@
 	</div>
 	<div slot="bullets">
 		<li>Received an 'AA' for my research on reinforcement learning.</li>
-		<li>Received an 'AA' for both my B1 Japanese langauge courses.</li>
+		<li>Received an 'AA' for both my B1 Japanese language courses.</li>
 	</div>
 </ResumeCard>
 
