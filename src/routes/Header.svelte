@@ -2,13 +2,13 @@
 	import { Navbar, NavBrand, DarkMode } from 'flowbite-svelte';
 </script>
 
-<div class="mt-2" />
-<Navbar class="bg-gray-100">
+<div class="mt-2"></div>
+<Navbar class="bg-gray-100 dark:bg-gray-900">
 	<NavBrand href="/">
 		<span
 			class="self-center
-				   whitespace-nowrap
-				   text-xl font-semibold
+				   font-mono
+				   text-xl font-bold whitespace-nowrap
 				   text-gray-900 dark:text-white"
 		>
 			Joost Visser
