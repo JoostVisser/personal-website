@@ -1,4 +1,3 @@
-# See all versions at https://hub.docker.com/r/oven/bun/tags
 FROM node:20-bookworm-slim as base
 WORKDIR /usr/src/app
 RUN npm install -g pnpm@9.1.3

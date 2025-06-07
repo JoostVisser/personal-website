@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
-
 @import 'tailwindcss';
 
 @plugin 'flowbite/plugin';
@@ -9,14 +6,15 @@
 
 @font-face {
 	font-family: 'Fira Code VF';
-	src: url('fonts/FiraCode-VF.woff2') format('woff2');
+	src: url('assets/fonts/FiraCode-VF.woff2') format('woff2');
 	font-weight: 300 700;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
 	font-family: 'Firava';
-	src: url('fonts/Firava.woff2') format('woff2');
+	src: url('assets/fonts/Firava.woff2') format('woff2');
 	font-weight: 100 900;
 	font-style: normal;
 	font-display: swap;
