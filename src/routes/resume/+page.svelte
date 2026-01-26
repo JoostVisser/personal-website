@@ -19,7 +19,7 @@
 
 <Heading tag="h1" class="mb-6 sm:mb-8 mt-2">Resume</Heading>
 
-<a href="/Resume Joost Visser.pdf" download="Resume Joost Visser.pdf"
+<a href="/Resume Joost Visser 2026.pdf" download="Resume Joost Visser 2026.pdf"
 	><Button outline class="mb-6 sm:mb-8">Download PDF</Button></a
 >
 
